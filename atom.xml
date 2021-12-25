@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bytelv.github.io</id>
     <title>字节君</title>
-    <updated>2021-12-25T13:13:31.167Z</updated>
+    <updated>2021-12-25T14:31:16.874Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bytelv.github.io"/>
     <link rel="self" href="https://bytelv.github.io/atom.xml"/>
@@ -10,6 +10,165 @@
     <logo>https://bytelv.github.io/images/avatar.png</logo>
     <icon>https://bytelv.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 字节君</rights>
+    <entry>
+        <title type="html"><![CDATA[信息学C++教程<-->计算机内的数据编码]]></title>
+        <id>https://bytelv.github.io/post/xin-xi-xue-cjiao-cheng-less-greaterji-suan-ji-nei-de-shu-ju-bian-ma/</id>
+        <link href="https://bytelv.github.io/post/xin-xi-xue-cjiao-cheng-less-greaterji-suan-ji-nei-de-shu-ju-bian-ma/">
+        </link>
+        <updated>2021-12-25T13:21:14.000Z</updated>
+        <content type="html"><![CDATA[<p>机器数<br>
+​ 一个数在计算机中的二进制表示形式, 叫做这个数的机器数。机器数是带符号的，在计算机用一个数的最高位存放符号, 正数为0, 负数为1.</p>
+<p>比如，十进制中的数 +3 ，计算机字长为8位，转换成二进制就是00000011。如果是 -3 ，就是 10000011 。</p>
+<p>​ 那么，这里的 00000011 和 10000011 就是机器数。</p>
+<p>真值<br>
+​ 因为第一位是符号位，所以机器数的形式值就不等于真正的数值。例如上面的有符号数 10000011，其最高位1代表负，其真正数值是 -3 而不是形式值131（10000011转换成十进制等于131）。所以，为区别起见，将带符号位的机器数对应的真正数值称为机器数的真值。</p>
+<p>​ 例：0000 0001的真值 = +000 0001 = +1，1000 0001的真值 = –000 0001 = –1</p>
+<p>原码<br>
+​ 原码就是符号位加上真值的绝对值, 即用第一位表示符号, 其余位表示值. 比如如果是8位二进制:</p>
+<p>​ [+1]原 = 0000 0001 [-1]原 = 1000 0001</p>
+<p>​ 第一位是符号位. 因为第一位是符号位, 所以8位二进制数的取值范围就是:[1111 1111 , 0111 1111] 即 [-127 , 127]</p>
+<p>反码<br>
+反码的表示方法是:</p>
+<p>正数的反码是其本身</p>
+<p>负数的反码是在其原码的基础上, 符号位不变，其余各个位取反.</p>
+<p>[+1] = [00000001]原 = [00000001]反</p>
+<p>[-1] = [10000001]原 = [11111110]反</p>
+<p>补码<br>
+补码的表示方法是:</p>
+<p>正数的补码就是其本身</p>
+<p>负数的补码是在其原码的基础上, 符号位不变, 其余各位取反, 最后+1. (即在反码的基础上+1)</p>
+<p>[+1] = [00000001]原 = [00000001]反 = [00000001]补</p>
+<p>[-1] = [10000001]原 = [11111110]反 = [11111111]补</p>
+<p>练习<br>
+7610 =[ ]源码=[ ]反码=[ ]补码</p>
+<p>-610 =[ ]源码=[ ]反码=[ ]补码</p>
+<p>-9610 =[ ]源码=[ ]反码=[ ]补码</p>
+<p>-10110 =[ ]源码=[ ]反码=[ ]补码</p>
+<p>-7310 =[ ]源码=[ ]反码=[ ]补码</p>
+<p>为何要使用原码, 反码和补码命令<br>
+让符号位参与运算</p>
+<p>反码让整数的减法可以用加法完成</p>
+<p>1-1=1+(-1)=[0000 0001]原+[1000 0001]原=[0000 0001]反+[1111 1110]反=[1111 1111]反=[1000 0000]原=-0</p>
+<p>补码解决了0的符号问题与两个0编码的问题</p>
+<p>1-1=1+(-1)=[0000 0001]原+[1000 0001]原=[0000 0001]补+[1111 1111]补=[0000 0000]补=[0000 0000]原</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[信息学C++教程<-->输入输出格式]]></title>
+        <id>https://bytelv.github.io/post/xin-xi-xue-cjiao-cheng-less-greatershu-ru-shu-chu-ge-shi/</id>
+        <link href="https://bytelv.github.io/post/xin-xi-xue-cjiao-cheng-less-greatershu-ru-shu-chu-ge-shi/">
+        </link>
+        <updated>2021-12-25T13:20:20.000Z</updated>
+        <content type="html"><![CDATA[<p>二进制输出整数<br>
+在计算机系统内的数据本身就是二进制</p>
+<p>思考：在C++中，如何通过cout函数来输出二进制的数字呢？</p>
+<p>所需库文件：1.iomanip //管理C++格式控制</p>
+<p>​ 2.bitset //二进制</p>
+<p>示例代码：</p>
+<p>#include <iostream><br>
+#include <iomanip><br>
+#include <bitset><br>
+using namespace std;<br>
+int main(){<br>
+bitset&lt;10&gt; a(5);<br>
+cout &lt;&lt; a;<br>
+}<br>
+运行效果：</p>
+<p>wRmJw.png</p>
+<p>在上述代码中，我们可以发现bitset函数后面有个 &lt;&gt; 号，它的实际含义，由读者进行更换 &lt;&gt; 里的数字，总结规律。</p>
+<p>不同进制输出<br>
+有些读者可能想输出其他进制，例如：十六进制或八进制。下面教读者如何进行不同进制的输出。</p>
+<p>示例代码<br>
+#include <iostream><br>
+#include <iomanip><br>
+using namespace std;<br>
+int main(){<br>
+cout &lt;&lt; hex &lt;&lt; 123 &lt;&lt;endl;//十六进制<br>
+cout &lt;&lt; dec &lt;&lt; 123 &lt;&lt;endl;//十进制<br>
+cout &lt;&lt; oct &lt;&lt; 123 &lt;&lt;endl;//八进制<br>
+return 0;<br>
+}<br>
+hex: 十六进制</p>
+<p>dec: 十进制</p>
+<p>oct: 十进制</p>
+<p>相信聪明的读者肯定明白如何进行不同的进制输出。</p>
+<p>思考：</p>
+<p>如果在上述代码中的“八进制”后，加一串代码：cout&lt;&lt;123;</p>
+<p>会发生什么？有什么规律？</p>
+<p>答案：</p>
+<p>当</p>
+<p>1<br>
+cout &lt;&lt; oct（其他进制也可以） &lt;&lt; x（数的代号）<br>
+如果下面的代码，没有出现这样类似的代码，那么输出x将会是x的oct进制(其他进制也可以)。</p>
+<p>小数的输出<br>
+​ 1.setprecision：有效数字X位。（x为未知数）</p>
+<p>​ 2.fixed：强制的把float类型和double类型输出小数，而不是科学计数法的形式。通常跟setprecision搭配使用。</p>
+<p>​ 3.setfill(‘*’)：字符填充，可以是字符常量或字符变量。—-&gt;setfill(‘x’) //x为某个字符或数字</p>
+<p>​ 4.scientific：科学计数法输出</p>
+<p>​ 5.setw(n):c++中在输出操作中使用的字段宽度设置，设置输出的域宽，n表示字段宽度。只对紧接着的输出有效，紧接着的输出结束后又变回默认的域宽。当后面紧跟着的输出字段长度小于n的时候，在该字段前面用空格补齐；当输出字段长度大于n时，全部整体输出。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[拾贰季生态园游记]]></title>
+        <id>https://bytelv.github.io/post/shi-er-ji-sheng-tai-yuan-you-ji/</id>
+        <link href="https://bytelv.github.io/post/shi-er-ji-sheng-tai-yuan-you-ji/">
+        </link>
+        <updated>2021-12-25T13:19:13.000Z</updated>
+        <content type="html"><![CDATA[<p>1.文章<br>
+​ 人生最奥妙的风景，是内心的淡定与从容–杨绛。乘云而来，化风而去，四月的风不似三月，软绵无力，但拂于面，似春于我心中！乘大巴，聆歌声来到最后的目的地。</p>
+<p>​ 在经过庄严的升国旗仪式后，我们伴花前，往于水田中试着播撒春天的希望，脱其鞋，束其衣，手中紧握着水稻，脚底享受着泥的轻抚。呵，水都快淹过苗了。但若要我重新选择，我仍会选择如此，毕竟生活在阴沟中，但仍有人仰望星空，愿其做一枚白昼的月亮，不求炫目的荣华，不屑世俗的浪潮。</p>
+<p>​ 清洗完脚后便进行体力活——军事障碍训练，同学们就像八卦阵一白一黑，有许多同学不废吹灰之力便顺利完成了所有挑战和一些体质较差的同学，包括我并不是十分完美，就如河中突兀的那块糙石与周围平滑光亮的鹅卵石格格不入，可努力就是把刻石刀将糙石打磨成一颗奇石，人亦如此，毕竟还有如此之多的星星需要我们去拯救，相信尘埃里会开出一朵花，因为曾有漫天星光，亮透胸膛。</p>
+<p>​ 在进行多项的活动后，同学们的体力严重透支，急需恰饭解决燃眉之急，这时一些”大厨“站了出来桥，那火如初龙，直窜云霄。那水与油锅之中，噼里啪啦。瞧那成品，皆是黑色。有些同学被逼无奈，搬出自己的干粮——方便面。可”大厨“们敢于尝试的精神是非常值得鼓励的，毕竟谁的人生没有犯过错，但只要努力便行。”五陵年少金市东银鞍。白马度春风落花踏尽游何处，笑入胡姬酒肆“中愿我们都是豪侠少年，充满激情。</p>
+<p>​ 黄河走东溟，白日落西海，逝川与流光，飘忽不待。恍惚间结束了？乘上大巴，望着夕阳，我陷入了思考，等会让我们重新开始！在这次社会实践活动中，我们始终寻找着快乐。可躺在车椅上，我们偶然发现，自己似乎没有收获到快乐。同学之间相互质疑，哦，我们亏了！事实截然截然相反，村上春树说过：追求得到之日即其终止之时，寻觅的过程亦即失去的过程。我们在学校学到的最重要的东西就是，最重要的东西，不可能在学校学到。那我们得到什么了呢？我们得到了锻炼，旧陈词就别搬上台了。我想我们得到了许多：春，团结，自信。但最重要的是我们的青春画卷再次点缀上五彩的颜色。我们与青春中感受春意，感受生活；于4月中，共学一室，共乐一地。</p>
+<p>2.视频</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[信息学C++教程<-->Helloworld]]></title>
+        <id>https://bytelv.github.io/post/xin-xi-xue-cjiao-cheng-less-greaterhelloworld/</id>
+        <link href="https://bytelv.github.io/post/xin-xi-xue-cjiao-cheng-less-greaterhelloworld/">
+        </link>
+        <updated>2021-12-25T13:18:21.000Z</updated>
+        <content type="html"><![CDATA[<p>0.导入<br>
+​ 在进行粗略的学习计算机底层知识和变量后，我们来开始编写年轻人的第一个程序–Helloworld。</p>
+<p>​ 我们需要用到的工具有：1.Dev-C++(也可以使用其他软件)2.脑子(最重要)</p>
+<p>1.Dev-C++的软件介绍<br>
+​ 我们先来介绍Dev-C++的安装步骤和基本界面下面放出一段Dev-C++的下载链接:https://sm.myapp.com/original/Development/Dev-Cpp_5.11_TDM-GCC_4.9.2_Setup.exe</p>
+<p>​ 下载好安装程序(.exe)，双击点开，依次点击next，等待安装完毕。</p>
+<p>​ 紧接着进入软件配置，我推荐大家选择英语主题样式，根据个人喜好进行调整。</p>
+<p>​ 好的，我们现在终于见到Dev-C++的庐山真面目。</p>
+<p>Dev-C++</p>
+<p>2.Helloworld<br>
+现在我们进入正题，依次点击”文件”–&gt;”新建”–&gt;”源代码”</p>
+<p>新建代码</p>
+<p>1.保存文件——&gt;**”Ctrl+S”**保存文档–&gt;命名文档–&gt;放置于固定文件夹。</p>
+<p>2.编写代码——&gt;这里我放出hello world的代码。各位最好亲手抄代码，不要直接复制粘贴。</p>
+<p>Helloworld代码</p>
+<p>3.编译文件——&gt;点击编译(F9)或编译运行(F11)。若无报错，你便可以在文件所在的位置找到一个名为”你的文件名”.exe文件。效果如下</p>
+<p>Helloworld演示图</p>
+<p>3.代码讲解<br>
+#include &lt; iostream&gt;<br>
+include:包含</p>
+<p>iostream:输入输出流</p>
+<p>思考：在运行中的程序，我们可以发现字的大小，颜色样式是固定的，为什么?</p>
+<p>原因：这个代码的意思是调用C++编译器中的iostrema库，将iostream库的代码复制进这个文件中，方便我们在下面调用cout函数。</p>
+<p>using namespace std;<br>
+所谓namespace，是指标识符的各种可见范围。C++标准程序库中的所有标识符都被定义于一个名为std的namespace中。</p>
+<p>int main()<br>
+每个程序有且只有一个主函数,为程序的开始.</p>
+<p>**函数:**为一组一起执行一个任务的语句。</p>
+<p>cout&lt;&lt;”Helloworld”&lt;&lt;endl; //会在屏幕上显示消息”Helloworld“<br>
+可以通俗的理解cout为显示器，&lt;&lt;为输出流，将右侧的hello world传送到显示器。（当然这样的说法只是为了帮助理解。）</p>
+<p>return 0;<br>
+作用：返回主函数main 0值</p>
+<p>当然如果不写这个语句，编译器会自动返回0值。</p>
+<p>思考：return 1会发生什么？</p>
+<p>4.结尾&amp;作业<br>
+年轻人的第1个程序就编写和理解完成了，但字节君将给大家布置一个作业–&gt;成绩表。</p>
+<p>效果图如下:</p>
+<p>作业演示图</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[信息学C++教程<-1->计算机底层知识和变量]]></title>
         <id>https://bytelv.github.io/post/xin-xi-xue-cjiao-cheng-less-1-greaterji-suan-ji-di-ceng-zhi-shi-he-bian-liang/</id>
