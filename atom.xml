@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bytelv.github.io</id>
     <title>字节君</title>
-    <updated>2021-12-26T01:47:55.378Z</updated>
+    <updated>2022-01-01T01:28:04.331Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bytelv.github.io"/>
     <link rel="self" href="https://bytelv.github.io/atom.xml"/>
     <subtitle>十年饮冰，难凉热血</subtitle>
     <logo>https://bytelv.github.io/images/avatar.png</logo>
     <icon>https://bytelv.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, 字节君</rights>
+    <rights>All rights reserved 2022, 字节君</rights>
     <entry>
         <title type="html"><![CDATA[信息学C++教程<-->计算机内的数据编码]]></title>
         <id>https://bytelv.github.io/post/xin-xi-xue-cjiao-cheng-less-greaterji-suan-ji-nei-de-shu-ju-bian-ma/</id>

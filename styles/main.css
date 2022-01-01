@@ -3228,6 +3228,53 @@ a {
   }
 }
 
+      .posttitlewithoutimg {
+        color: #151515;
+      }
+    
+      .sitename {
+        color: #151515;
+      }
+    
+        .describtion {
+          color: #151515;
+        }
+      
+        .menubutton {
+          color: #151515;
+        }
+
+        .menucontainer span::before,
+        .menucontainer span::after {
+          color:#151515;
+          content: attr(data-text);
+          position: absolute;
+          top: -0.5em;
+          left: 0;
+          width: 100%;
+          transition: 0.3s ease-out;
+        }
+
+        .menubutton:visited{
+          color: #151515;
+        }
+      
+        .posttitle {
+          color: #151515;
+        }
+      
+        #sitegotimeDate,#sitegotimes,#footinfo,#footinfo a{
+          color: #151515;
+        }
+      
+        .mobiledescribtion{
+          color: #151515;
+        }
+      
+        .navbar-inverse{
+          background-color: #151515;
+        }
+      
         .menubutton{
           font-family: Arial;
         }
