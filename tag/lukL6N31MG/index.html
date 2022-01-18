@@ -1,12 +1,12 @@
 
 <html>
-  <head lang="zh">
+<head lang="zh">
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
         <meta content="yes" name="apple-mobile-web-app-capable"/>
         <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
         <meta content="telephone=no" name="format-detection"/>
         <meta name="renderer" content="webkit">
-    <title>信息学C++教程&lt;-1-&gt;计算机底层知识和变量 | 字节君</title>
+    <title>字节君</title>
 <link href="https://bytelv.github.io/styles/main.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript" src="https://bytelv.github.io/media/scripts/jquery.js"></script>
 <script type="text/javascript" src="https://bytelv.github.io/media/scripts/basic.js"></script>
@@ -16,7 +16,7 @@
   </head>
 
   <body>
-     <div class="header">
+    <div class="header">
       <div class="logo_title">
 		  
         <div class="title animated fadeInDown"><img src="https://bytelv.github.io/images/avatar.png?v=1642468208465"/>
@@ -135,7 +135,6 @@
     <div class="main">
       <div class="main-inner">
 
-
 <div class="content">
 
 
@@ -143,31 +142,31 @@
 
 
 
-  <div class="post_page" >
+  <div class="post_list" >
 
+	
 <div class="post">
-  <div class="post_title sm_margin">
-    <h2><a>信息学C++教程&lt;-1-&gt;计算机底层知识和变量</a>
-
-
-
+  <div class="post_title weaklink">
+    <h2><a href="https://bytelv.github.io/post/zhong-kao-man-fen-zuo-wen-fang-xie/" >中考满分作文仿写</a>
     </h2>
   </div>
-
-  <div class="post_details">
-    <div class="info"><i class="fa fa-clock-o"></i>
-<span class="date_info">2021-12-25</span>
-<i class="fa fa-eye"></i>
-
-<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
-
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2022-01-18</span>
 
 <i class="fa fa-bookmark-o"></i>
+	
 <span class="tags_info weaklink">
 	
-	<a href="https://bytelv.github.io/tag/gogAAUVqp/" class="tag">计算机</a>
+	<a href="https://bytelv.github.io/tag/_p4-ZX4XU/" class="tag">寒假</a>
 
-	<a href="https://bytelv.github.io/tag/_kHrU6I0Em/" class="tag">信息学</a>
+
+	<a href="https://bytelv.github.io/tag/aJd-IpexD1/" class="tag">作业</a>
+
+
+	<a href="https://bytelv.github.io/tag/lukL6N31MG/" class="tag">作文</a>
+
 
 
 </span>
@@ -177,63 +176,19 @@
 
   </div>
 
-
-
-
-
-  <div class="post_content markdown"><p class="md_block">
-    <span class="md_line md_line_start md_line_end"><p>0.导入<br>
-如何优雅地学习计算机编程。我们得首先了解编程是什么？打个比方–写信.</p>
-<p>大家都知道写信所用的语言双方都懂，这样的信才做到了信息交流，人和计算机也是如此人和计算机交流得用计算机听得懂的语言。</p>
-<p>要想学习编程就要先从底层学起，下面有一幅图帮助大家了解计算机的构成。</p>
-<p>计算机导论</p>
-<p>1.CPU架构<br>
-我们先从计算机的大脑CPU开始，假设CPU是一块长方形，它里面包含着三个脑，在大脑的构造中，左脑更着重于数字运算，右脑着重于语言处理，相对应的左脑便是运算器，右脑便是控制器。</p>
-<p>CPU架构</p>
-<p>在CPU架构中必不可少的便是数据的处理输入和输出，而存放数据的有两种存储区内存储器和外存储器，简称内存和外存。CPU这个家伙只和内存玩耍而不跟外存交流，凡是经过CPU的数据只能读写到内存里，内存不内向，乐意跟外存玩耍，跟外存交换数据。</p>
-<p>在现在的主流计算机中，内存约为8G或16G，G可以粗略的换算为1亿，那么在8G的计算机空间便有8亿的人家，每位居民的门牌便是地址，而地址又是又长又臭，十分难记。</p>
-<p>2.变量<br>
-2.1变量的定义与操作<br>
-这时就轮到变量出场了，那么变量又是什么玩意？变量可以给数据进行命名赋值。</p>
-<p>数据类型+变量名称</p>
-<p>例子：int a;</p>
-<p>​ float bytespace,bytescore;</p>
-<p>2.2变量的占用大小<br>
-在给变量进行命名中我们发现一个新的词汇数据类型，C++数据类型占用大小</p>
-<p>这又是怎的一回事？来看看世界上第1台计算机–ENIAC。</p>
-<p>世界上第一台计算机</p>
-<p>这台计算机是用灯泡的亮和灭来代表1和0，那么它是如何进行数学运算的呢？</p>
-<p>一个灯泡是一位bit。一组灯泡里有8个灯泡为一字节bit，所以8bit=1Byte</p>
-<p>在C++中有10种数据类型，就举char和int为例，char占1byte,所以它的取值范围为0~2的8次方，如何理解？2的8次方中的8为1×8。1是占用大小—1Byte，8为1Byte=8bit，所以2的8次方的8次项就为<strong>占用大小×8(bit)</strong>。</p>
-<p>验证一下结论：int占用4Byte空间，套进公式得（取值范围=0~2的32次），32次=4(Byte)×8(bit)。</p>
-<p>很简单吧！有人说计算机又快<strong>又准，那么我将推翻这个悖论。在超过取值范围后，精度会丢失</strong>。</p>
-<p>2.3变量的使用<br>
-那我们该如何正确食用变量呢？</p>
-<p>读取变量值 +直接使用变量名</p>
-<p>输出:cout&lt;&lt;a;</p>
-<p>参与运算:c=a+1;</p>
-<p>给变量赋值</p>
-<p>输入:cin&gt;&gt;a; 或者 scanf(“%d”,&amp;a);<br>
-直接赋值:a=190;<br>
-大家初学C++，可能对一些语法不了解，我们先讲一下运算符</p>
-<p>算术运算符	+	-	*	/	%	++	–					<br>
-逻辑运算符	&amp;&amp;	||	!									<br>
-位运算符	&amp;	|	^	~	&gt;&gt;	&lt;&lt;						<br>
-赋值运算符	=	+=	-=	*=	/=	%=	&lt;&lt;=	&gt;&gt;=	&amp;=	^=	|=	~=<br>
-杂项运算符	size of()	condition?:	,</p>
-</p>
-
-     <p class="md_block">
-</p> 
 </div>
+	
+	
 
-</div>
+<div class="paginator pager pagination" >
+	
 
 
 
-<link href="https://bytelv.github.io/styles/main.css" type="text/css" rel="stylesheet"/>
+    <div style="clear:both;height:0;"></div>
 
-<div class="doc_comments">
+
+  </div>
 
 </div>
 
@@ -246,12 +201,9 @@
 
       </div>
 
-
-
-
     </div>
 
-   <div class="footer">
+    <div class="footer">
 <link href="https://bytelv.github.io/styles/main.css" type="text/css" rel="stylesheet"/><div class="site_footer_wrap"><div class="site_footer">
 
       <div class="mysocials"><div class="my_socials">
