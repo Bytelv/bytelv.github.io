@@ -19,7 +19,7 @@
      <div class="header">
       <div class="logo_title">
 		  
-        <div class="title animated fadeInDown"><img src="https://bytelv.github.io/images/avatar.png?v=1642753342120"/>
+        <div class="title animated fadeInDown"><img src="https://bytelv.github.io/images/avatar.png?v=1642769899737"/>
 
           <h1 title="字节君" class="weaklink"><a href="/">字节君</a>
 
@@ -366,6 +366,32 @@
 
 <div class="doc_comments">
 
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '98e46c76e042a4a0c4d2',
+    clientSecret: '5e62470a74ae9e775776c7bf05090450d8c77703',
+    repo: 'bytelv.github.io',
+    owner: 'Bytelv',
+    admin: ['Bytelv'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+			  
+          
+        
 </div>
 
 
