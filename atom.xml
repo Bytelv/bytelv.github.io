@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bytelv.github.io</id>
     <title>字节君</title>
-    <updated>2022-01-22T03:31:12.289Z</updated>
+    <updated>2022-02-07T03:02:35.313Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bytelv.github.io"/>
     <link rel="self" href="https://bytelv.github.io/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://bytelv.github.io/images/avatar.png</logo>
     <icon>https://bytelv.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, 字节君</rights>
+    <entry>
+        <title type="html"><![CDATA[关于我对AR眼镜的畅想]]></title>
+        <id>https://bytelv.github.io/post/guan-yu-wo-dui-ar-yan-jing-de-chang-xiang/</id>
+        <link href="https://bytelv.github.io/post/guan-yu-wo-dui-ar-yan-jing-de-chang-xiang/">
+        </link>
+        <updated>2022-02-07T03:01:48.000Z</updated>
+        <content type="html"><![CDATA[<p>我相信ar是未来的发展趋势。最理想的产品形态是一副眼镜。</p>
+<p>但在眼镜中无法装下更强的处理器。这意味着他的计算能力要减小。</p>
+<p>眼镜不应该负责计算，而应该负责提供画面，负责计算的应该是裤兜里的运算单位。例如一个小小的方块里面装着的是很强的处理器。</p>
+<p>再通过某种特定的通信协议向眼镜传送指令和画面。</p>
+<p>理想中的眼镜应该是看到某个物体就会显示出它对应的信息。在生活中可以帮人们选购产品。在路上可以帮别人分析路上情景。在工作中可以帮助你更好的工作。</p>
+<p>至于我为什么不选择云计算。是因为我觉得云计算依靠网速虽然说现在的网速已经达到很快了，用户没有真正的使用权。但你想一想，就算运算速度再快，可靠程度也不如兜中的那块运算单位产品会受到厂商的限制。用户心里也没谱。</p>
+<p>我不觉得在家办公是ar眼镜的最好用途。 Al眼镜是辅助我们生活的工具。而不像vr是主导我们生活的工具。</p>
+<p>科技本身就是为了让生活创造出更多的价值。而价值本身不能被埋没。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[中考满分作文仿写]]></title>
         <id>https://bytelv.github.io/post/zhong-kao-man-fen-zuo-wen-fang-xie/</id>
